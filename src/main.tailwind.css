@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .nav-links {
+        @apply text-white text-center hover:text-transparent bg-clip-text bg-gradient-to-b from-blue-700 to-pink-600 py-3;
+    }
+}

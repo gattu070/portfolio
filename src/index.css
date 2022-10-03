@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "gilroyregular";
+    background-color: #171717;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@font-face {
+    font-family: "gilroybold";
+    src: url("font/gilroy-bold-webfont.woff2") format("woff2"), url("font/gilroy-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroyregular";
+    src: url("font/gilroy-regular-webfont.woff2") format("woff2"), url("font/gilroy-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroysemibold";
+    src: url("font/gilroy-semibold-webfont.woff2") format("woff2"), url("font/gilroy-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroythin";
+    src: url("font/gilroy-thin-webfont.woff2") format("woff2"), url("font/gilroy-thin-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroymedium";
+    src: url("font/gilroy-medium-webfont.woff2") format("woff2"), url("font/gilroy-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Hero>* {
+    height: inherit;
+}
+
+.container>* {
+    height: inherit;
+}
+
+.grid>* {
+    height: inherit;
+}

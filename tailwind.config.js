@@ -1,0 +1,71 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+    ],
+    theme: {
+        fontWeight: {
+            hairline: 100,
+            'extra-light': 100,
+            thin: 200,
+            light: 300,
+            normal: 400,
+            medium: 500,
+            semibold: 600,
+            bold: 700,
+            extrabold: 800,
+            'extra-bold': 800,
+            black: 900,
+        },
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+            '3xl': '1800px',
+        },
+        extend: {
+            height: {
+                '128': '32rem',
+                'hero-w': '36.29rem',
+                '90p': '90%',
+                '80p': '80%',
+                '70p': '70%',
+                '65p': '65%',
+                '60p': '60%',
+                '50p': '50%',
+                '45p': '45%',
+                '40p': '40%',
+                '30p': '30%',
+                '35p': '35%',
+                '30p': '30%',
+                '25p': '25%',
+                '20p': '20%',
+            },
+            width: {
+                '90p': '90%',
+                '80p': '80%',
+                '70p': '70%',
+                '65p': '65%',
+                '60p': '60%',
+                '50p': '50%',
+                '40p': '40%',
+                '30p': '30%',
+                '35p': '35%',
+                '30p': '30%',
+                '20p': '20%',
+            },
+            backgroundImage: {
+                'hero-pattern': "url('./Components/Hero/images/1.jpg')",
+            },
+            dropShadow: {
+                'white-shade': '0 35px 35px 0 rgba(255,255,255,0.5)',
+            },
+            colors: {
+                'bg-color': '#171717',
+            },
+        },
+    },
+    plugins: [],
+}
