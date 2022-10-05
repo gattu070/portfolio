@@ -2,7 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+    /* Global */
+    .title {
+        @apply text-center font-bold text-3xl pb-10 tracking-wide;
+    }
+
+    /* Navbar */
     .nav-links {
         @apply text-white text-center hover:text-transparent bg-clip-text bg-gradient-to-b from-blue-700 to-pink-600 py-3;
     }
+
+    /* About */
+    .Designer {
+        @apply flex flex-col items-center border-r-zinc-400 border-t-0 border-l-0 border-b-0 border-r-2;
+    }
+    .no-border {
+        @apply border-0;
+    }
+    .circle {
+        @apply rounded-full bg-bg-color w-110px h-110px flex justify-center items-center;
+    }
+    .decription {
+        @apply flex flex-col items-center justify-between;
+    }
+    .Heading {
+        @apply text-black text-2xl font-black pt-6 pb-6;
+    }
+    .color-change {
+        @apply text-center text-fuchsia-900 pb-5;
+    }
+    .tech {
+        @apply text-center font-semibold;
+    }
+
+    /* Projects */
+    .card-p{
+        @apply px-36 py-28 rounded-lg text-center bg-card-bg-1 bg-cover bg-center ;
+    }
+
+    .main-card-p {
+        @apply rounded-lg transition-all duration-500 hover:bg-gradient-to-b from-blue-700 to-pink-600;
+    }
+
+    .card-text {
+        @apply invisible transition-all duration-100 ease-linear group-hover:visible ;
+    }
+
 }

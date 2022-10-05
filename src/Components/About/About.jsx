@@ -1,10 +1,12 @@
 import React from 'react'
+import { AboutCards } from './AboutCards'
 
 export const About = () => {
     return (
-        <section className="Hero w-full text-white pt-7  bg-black">
+        <>
+        <section className="Hero w-full text-white pt-16 pb-96 bg-black">
             <div className="container px-3 mx-auto lg:max-w-7xl md:px-8">
-                <p className='text-center font-bold text-3xl pb-7 tracking-wide'>About</p>
+                <p className='title'>About</p>
 
                 <div className="description">
                     <div className="desc-text flex items-center justify-center w-full">
@@ -15,5 +17,9 @@ export const About = () => {
                 </div>
             </div>
         </section>
+        <>
+            <AboutCards/>
+        </>
+        </>
     )
 }

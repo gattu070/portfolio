@@ -27,6 +27,7 @@ module.exports = {
         },
         extend: {
             height: {
+                '110px': '110px',
                 '128': '32rem',
                 'hero-w': '36.29rem',
                 '90p': '90%',
@@ -44,6 +45,7 @@ module.exports = {
                 '20p': '20%',
             },
             width: {
+                '110px': '110px',
                 '90p': '90%',
                 '80p': '80%',
                 '70p': '70%',
@@ -58,11 +60,13 @@ module.exports = {
             },
             backgroundImage: {
                 'hero-pattern': "url('./Components/Hero/images/1.jpg')",
+                'card-bg-1': "url('./Components/Projects/Background/bg1.jpg')",
             },
             dropShadow: {
                 'white-shade': '0 35px 35px 0 rgba(255,255,255,0.5)',
             },
             colors: {
+                'overlay': 'linear-gradient(180deg, rgba(29,78,216,0.5) 0%, rgba(219,39,119,0.5) 100%)',
                 'bg-color': '#171717',
             },
         },
