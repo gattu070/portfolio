@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { CardData } from './ProjectCards';
 
 export const Projects = () => {
     return (
@@ -8,7 +9,17 @@ export const Projects = () => {
 
                 <div>
                     <div className="grid grid-cols-3 gap-5">
-                        <div className="main-card-p">
+
+                        {CardData.map((card, index) => (
+                            <div className={`main-card-p {card.bg}`} key={card.value}>
+                                <div className="card-p group">
+                                    <p className='card-text'>{card.text}</p>
+                                </div>
+                            </div>
+
+                        ))}
+
+                        {/* <div className="main-card-p">
                             <div className="card-p group">
                                 <p className='card-text'>First Project</p>
                             </div>
@@ -22,7 +33,7 @@ export const Projects = () => {
                             <div className="card-p group">
                                 <p className='card-text'>First Project</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

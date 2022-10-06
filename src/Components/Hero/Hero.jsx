@@ -16,7 +16,7 @@ export const Hero = () => {
                 <button className='bg-gradient-to-r from-blue-700 to-pink-600 rounded-full w-40 py-2 border-none'>Download CV</button>
               </a>
               <a href="#">
-                <button className='w-40 py-2 rounded-full border-gray-400 border-2 hover:bg-gray-400 hover:text-black hover:font-bold'>More</button>
+                <button className='w-40 py-2 rounded-full border-gray-400 border-2 hover:bg-gray-400 transition duration-300 hover:text-black hover:font-bold'>More</button>
               </a>
             </div>
           </div>

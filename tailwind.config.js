@@ -68,6 +68,10 @@ module.exports = {
             colors: {
                 'overlay': 'linear-gradient(180deg, rgba(29,78,216,0.5) 0%, rgba(219,39,119,0.5) 100%)',
                 'bg-color': '#171717',
+                'card-overlay': 'rgba(72, 84, 96, 0.9)',
+            },
+            transitionProperty: {
+                'every': 'all',
             },
         },
     },
