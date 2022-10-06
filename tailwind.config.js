@@ -61,6 +61,11 @@ module.exports = {
             backgroundImage: {
                 'hero-pattern': "url('./Components/Hero/images/1.jpg')",
                 'card-bg-1': "url('./Components/Projects/Background/bg1.jpg')",
+                'card-bg-2': "url('./Components/Projects/Background/bg2.jpg')",
+                'card-bg-3': "url('./Components/Projects/Background/bg3.jpg')",
+                'card-bg-4': "url('./Components/Projects/Background/bg4.jpg')",
+                'card-bg-5': "url('./Components/Projects/Background/bg5.jpg')",
+
             },
             dropShadow: {
                 'white-shade': '0 35px 35px 0 rgba(255,255,255,0.5)',

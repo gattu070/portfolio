@@ -7,9 +7,11 @@ export const CardData = [
     {
         value: 2,
         text: 'Second Project',
+        bg: 'bg-card-bg-4',
     },
     {
         value: 3,
         text: 'Third Project',
+        bg: 'bg-card-bg-3',
     },
 ];

@@ -1,17 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 export const Navbar = () => {
 
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <nav className="w-full">
+        <nav className="w-full animate__animated animate__fadeInDown">
             <div className="container justify-between px-3 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-3xl font-bold text-white text-transparent bg-clip-text bg-gradient-to-b from-blue-700 to-pink-600">
+                            <h2 className="text-3xl font-bold text-gradient">
                                 Gautam
                             </h2>
                         </a>
