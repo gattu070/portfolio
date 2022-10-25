@@ -1,24 +1,30 @@
 import React from 'react';
-import { useState } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
+import { useState, useEffect } from 'react';
+import { Sling as Hamburger } from 'hamburger-react';
 import "animate.css/animate.min.css";
 
 export const Navbar = () => {
 
     const [navbar, setNavbar] = useState(false);
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
 
     return (
-        <nav className="w-full animate__animated animate__fadeInDown">
+        <nav className={`sticky top-0 z-50 ${scroll ? 'bg-zinc-900 backdrop-filter backdrop-blur-lg bg-opacity-30 ' : ''}  w-full animate__animated animate__fadeInDown`}>
             <div className="container justify-between px-3 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                    <div className="flex items-center justify-between py-3 md:py-4 md:block">
                         <a href="javascript:void(0)">
                             <h2 className="text-3xl font-bold text-gradient">
                                 Gautam
                             </h2>
                         </a>
                         <div className="md:hidden">
-                            <button
+                            {/* <button
                                 className="p-2 text-gray-700 rounded-md outline-none"
                                 onClick={() => setNavbar(!navbar)}
                             >
@@ -51,23 +57,30 @@ export const Navbar = () => {
                                         />
                                     </svg>
                                 )}
+                            </button> */}
+                            <button onClick={() => setNavbar(!navbar)}>
+                                <Hamburger
+                                    role='button'
+                                    color='#ffffff'
+                                    direction="right"
+                                />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div className={`flex-1 justify-self-center pb-3 md:block md:pb-0 transition ease-in-out delay-150 ${navbar ? "block" : "hidden"}`}>
+                    <div className={`flex-1 justify-self-center pb-3 md:block md:pb-0 transition duration-500 ${navbar ? "block text-center" : "hidden animate__animated animate__fadeOutRight"}`}>
                         <ul className="items-center justify-center gap-5 md:flex md:space-x-6 md:space-y-0 md:text-center">
-                            <li className="nav-links">
+                            <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft first" : "hidden "}`}>
                                 <a href="javascript:void(0)">Home</a>
                             </li>
-                            <li className="nav-links">
+                            <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft sec" : "hidden"}`}>
                                 <a href="javascript:void(0)">About me</a>
                             </li>
-                            <li className="nav-links">
+                            <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft thir" : "hidden"}`}>
                                 <a href="javascript:void(0)">Projects</a>
                             </li>
-                            <li className="nav-links">
+                            <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft for" : "hidden"}`}>
                                 <a href="javascript:void(0)">Contact</a>
                             </li>
                         </ul>

@@ -35,4 +35,9 @@
         @apply text-center font-semibold;
     }
 
+    /* conatct */
+    .inputBox {
+        @apply mt-1 py-3 transition duration-500 caret-indigo-900 focus:outline-none text-black border-b-indigo-900 border-2 border-t-0 border-l-0 border-r-0 w-full focus:bg-indigo-50 focus:rounded-lg focus:border-b-0 focus:px-4 focus:shadow-md;
+    }
+
 }

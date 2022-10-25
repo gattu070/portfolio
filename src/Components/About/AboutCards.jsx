@@ -5,26 +5,105 @@ import { BsFillBootstrapFill } from "react-icons/bs";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
-// const AboutCard = [
-//     {
-//         img: '/assets/Images/designer.png',
-//         heading: 'Front-end Developer',
-//         firstSpan: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
-//         PurpleText: 'Technologies that I am familiar with :',
-//     },
-//     {
-//         img: '/assets/Images/designer.png',
-//         heading: 'Front-end Developer',
-//         firstSpan: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
-//         PurpleText: 'Technologies that I am familiar with :',
-//     },
-//     {
-//         img: '/assets/Images/designer.png',
-//         heading: 'Front-end Developer',
-//         firstSpan: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
-//         PurpleText: 'Technologies that I am familiar with :',
-//     },
-// ];
+const AboutCard = [
+    {
+        img: '/assets/Images/learner.png',
+        heading: 'Learner',
+        firstSpan: 'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
+        PurpleText: 'Technologies that I am learning :',
+        class: 'Designer',
+        tech: [
+            {
+                text: 'Tailwind CSS',
+                icon: SiTailwindcss,
+                class: 'inline'
+            },
+            {
+                text: 'SASS',
+                icon: SiSass,
+                class: 'inline'
+            },
+            {
+                text: 'Bootstrap Mixin',
+                icon: BsFillBootstrapFill,
+                class: 'inline'
+            },
+            {
+                text: 'Wordpress',
+                icon: 'i',
+                class: 'fa-brands fa-wordpress-simple'
+            },
+        ]
+    },
+    {
+        img: '/assets/Images/designer.png',
+        heading: 'Front-end Developer',
+        firstSpan: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
+        PurpleText: 'Technologies that I am familiar with :',
+        class: 'Designer',
+        tech: [
+            {
+                text: 'HTML',
+                icon: 'i',
+                class: 'fa-brands fa-html5',
+            },
+            {
+                text: 'CSS',
+                icon: 'i',
+                class: 'fa-brands fa-css3-alt',
+            },
+            {
+                text: 'JS',
+                icon: 'i',
+                class: 'fa-brands fa-square-js',
+            },
+            {
+                text: 'JQUERY',
+                icon: DiJqueryLogo,
+                class: 'inline',
+            },
+            {
+                text: 'REACT FRONT-END',
+                icon: 'i',
+                class: 'fa-brands fa-react',
+            },
+            {
+                text: 'SCSS',
+                icon: 'i',
+                class: 'fa-brands fa-sass',
+            },
+            {
+                text: 'BOOTSTRAP',
+                icon: 'i',
+                class: 'fa-brands fa-bootstrap',
+            },
+        ]
+    },
+    {
+        img: '/assets/Images/earth.png',
+        heading: 'Languages',
+        firstSpan: 'I am good at foreign lnguages, they are very interesting and important in my opinion.',
+        PurpleText: 'Languages that I know :',
+        class: 'Designer no-border',
+        tech: [
+            {
+                text: 'Gujarati',
+                icon: 'i',
+                class: '',
+            },
+            {
+                text: 'Hindi',
+                icon: 'i',
+                class: '',
+            },
+            {
+                text: 'English',
+                icon: 'i',
+                class: '',
+            },
+        ]
+    },
+];
 
 export const AboutCards = () => {
     return (
@@ -38,67 +117,33 @@ export const AboutCards = () => {
             <div className="w-full text-black -mt-72">
                 <section className='container px-3 mx-auto lg:max-w-7xl md:px-8'>
                     <div className="card-comp bg-zinc-300 rounded-lg grid grid-flow-row grid-cols-3 p-10">
-                        <div className="Designer">
-                            <div className="circle">
-                                <img src="/assets/Images/designer.png" className='w-50p' alt="" />
-                            </div>
-                            <div className="decription">
-                                <p className='Heading'>Front-end Developer</p>
-                                <span className='text-center pb-5'>
-                                    I value simple content structure, clean design patterns, and thoughtful interactions.
-                                </span>
-                                <p className='color-change'>
-                                    Technologies that I am familiar with :
-                                </p>
-                                <div className="tech">
-                                    <p>HTML <i class="fa-brands fa-html5"></i></p>
-                                    <p>CSS <i class="fa-brands fa-css3-alt"></i></p>
-                                    <p>JS <i class="fa-brands fa-square-js"></i></p>
-                                    <p>JQUERY <DiJqueryLogo className='inline' /></p>
-                                    <p>REACT-FRONTEND <i class="fa-brands fa-react"></i></p>
-                                    <p>SCSS <i class="fa-brands fa-sass"></i></p>
-                                    <p>BOOTSTRAP <i class="fa-brands fa-bootstrap"></i></p>
+
+                        {
+                            AboutCard.map((card, index) => {
+                                return <div key={index} className={card.class}>
+                                    <div className="circle">
+                                        <img src="/assets/Images/learner.png" className='w-50p' alt="" />
+                                    </div>
+                                    <div className="decription">
+                                        <p className='Heading'>{card.heading}</p>
+                                        <span className='text-center pb-5'>
+                                            {card.firstSpan}
+                                        </span>
+                                        <p className='color-change'>
+                                            {card.PurpleText}
+                                        </p>
+                                        <div className="tech">
+
+                                            {card?.tech?.map((techie, index) => {
+                                                return <p key={index}>{techie?.text} <techie.icon className={`${techie?.class}`} /> </p>
+                                            })}
+
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="Designer">
-                            <div className="circle">
-                                <img src="/assets/Images/learner.png" className='w-50p' alt="" />
-                            </div>
-                            <div className="decription">
-                                <p className='Heading'>Learner</p>
-                                <span className='text-center pb-5'>
-                                    I like to code things from scratch, and enjoy bringing ideas to life in the browser.                            </span>
-                                <p className='color-change'>
-                                    Technologies that I am learning :
-                                </p>
-                                <div className="tech">
-                                    <p>Tailwind CSS <SiTailwindcss className='inline' /></p>
-                                    <p>SASS <SiSass className='inline' /></p>
-                                    <p>Bootstrap Mixin <BsFillBootstrapFill className='inline' /></p>
-                                    <p>Wordpress <i class="fa-brands fa-wordpress-simple"></i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="Designer no-border">
-                            <div className="circle">
-                                <img src="/assets/Images/earth.png" className='w-50p' alt="" />
-                            </div>
-                            <div className="decription">
-                                <p className='Heading'>Languages</p>
-                                <span className='text-center pb-5'>
-                                    I am good at foreign lnguages, they are very interesting and important in my opinion.
-                                </span>
-                                <p className="color-change">
-                                    Languages that I know :
-                                </p>
-                                <div className="tech">
-                                    <p>Gujarati</p>
-                                    <p>Hindi</p>
-                                    <p>English</p>
-                                </div>
-                            </div>
-                        </div>
+                            })
+                        }
+
                     </div>
                 </section>
             </div>

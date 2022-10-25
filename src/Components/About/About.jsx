@@ -14,7 +14,7 @@ export const About = () => {
                         animateIn="animate__jackInTheBox"
                         duration={1.2}
                     >
-                        <p className='title  text-gradient'>About</p>
+                        <p className='title text-gradient'>About</p>
                     </ScrollAnimation>
                     <ScrollAnimation
                         animateOnce={true}
