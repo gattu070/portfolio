@@ -4,7 +4,7 @@
 @layer utilities {
     /* Global */
     .title {
-        @apply text-center font-bold text-3xl pb-10 tracking-wide;
+        @apply text-center font-bold text-2xl sm:text-3xl pb-10 tracking-wide;
     }
 
     /* Navbar */
@@ -14,25 +14,39 @@
 
     /* About */
     .Designer {
-        @apply flex flex-col items-center border-r-zinc-400 border-t-0 border-l-0 border-b-0 border-r-2;
+        @apply flex flex-col items-center  border-zinc-400 border-t-0 border-l-0 border-b-2 border-r-0 sm:border-t-0 sm:border-l-0 sm:border-b-0 sm:border-r-2;
+    }
+    .one {
+        @apply pt-0 pb-5 sm:p-0;
+    }
+    .two {
+        @apply pt-5 pb-5 sm:p-0;
+    }
+    .three {
+        @apply pt-5 pb-0 sm:p-0;
     }
     .no-border {
         @apply border-0;
     }
     .circle {
-        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-110px h-110px flex justify-center items-center;
+        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-[90px] h-[90px] sm:w-110px sm:h-110px flex justify-center items-center;
     }
     .decription {
         @apply flex flex-col items-center justify-between;
     }
     .Heading {
-        @apply text-black text-2xl font-black pt-6 pb-6;
+        @apply text-black text-xl sm:text-2xl font-black pt-6 pb-6;
     }
     .color-change {
         @apply text-center text-fuchsia-900 pb-5;
     }
     .tech {
         @apply text-center font-semibold;
+    }
+
+    /* conatct */
+    .inputBox {
+        @apply mt-1 py-3 text-sm sm:text-base transition duration-500 caret-indigo-900 focus:outline-none text-black border-b-indigo-900 border-2 border-t-0 border-l-0 border-r-0 w-full focus:bg-indigo-50 focus:rounded-lg focus:border-b-0 focus:px-3 sm:focus:px-4 focus:shadow-md;
     }
 
 }

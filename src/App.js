@@ -5,6 +5,8 @@ import { Hero } from './Components/Hero/Hero';
 import { About } from './Components/About/About';
 import { Projects } from './Components/Projects/Projects';
 import { ScrollBtn } from './Components/ScrollBtn/ScrollBtn';
+import { Footer } from './Components/Footer/Footer';
+import { Contact } from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <About />
       <Projects />
       <ScrollBtn />
+      <Contact />
+      <Footer />
     </>
   );
 }
