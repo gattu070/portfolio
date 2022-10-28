@@ -11,7 +11,7 @@ const AboutCard = [
         heading: 'Learner',
         firstSpan: 'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
         PurpleText: 'Technologies that I am learning :',
-        class: 'Designer',
+        class: 'Designer one',
         tech: [
             {
                 text: 'Tailwind CSS',
@@ -40,7 +40,7 @@ const AboutCard = [
         heading: 'Front-end Developer',
         firstSpan: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
         PurpleText: 'Technologies that I am familiar with :',
-        class: 'Designer',
+        class: 'Designer two',
         tech: [
             {
                 text: 'HTML',
@@ -84,7 +84,7 @@ const AboutCard = [
         heading: 'Languages',
         firstSpan: 'I am good at foreign lnguages, they are very interesting and important in my opinion.',
         PurpleText: 'Languages that I know :',
-        class: 'Designer no-border',
+        class: 'Designer no-border three',
         tech: [
             {
                 text: 'Gujarati',
@@ -115,24 +115,24 @@ export const AboutCards = () => {
         >
 
             <div className="w-full text-black -mt-72">
-                <section className='container px-3 mx-auto lg:max-w-7xl md:px-8'>
-                    <div className="card-comp bg-zinc-300 rounded-lg grid grid-flow-row grid-cols-3 p-10">
+                <section className='container px-4 sm:px-3 mx-auto lg:max-w-7xl md:px-8'>
+                    <div className="card-comp bg-zinc-300 rounded-lg grid grid-flow-row grid-cols-1 sm:grid-cols-2  p-10">
 
                         {
                             AboutCard.map((card, index) => {
                                 return <div key={index} className={card.class}>
                                     <div className="circle">
-                                        <img src="/assets/Images/learner.png" className='w-50p' alt="" />
+                                        <img src={card.img} className='w-50p' alt="" />
                                     </div>
                                     <div className="decription">
                                         <p className='Heading'>{card.heading}</p>
-                                        <span className='text-center pb-5'>
+                                        <span className='text-center text-sm sm:text-base pb-5'>
                                             {card.firstSpan}
                                         </span>
-                                        <p className='color-change'>
+                                        <p className='color-change text-sm sm:text-base'>
                                             {card.PurpleText}
                                         </p>
-                                        <div className="tech">
+                                        <div className="tech text-sm sm:text-base">
 
                                             {card?.tech?.map((techie, index) => {
                                                 return <p key={index}>{techie?.text} <techie.icon className={`${techie?.class}`} /> </p>

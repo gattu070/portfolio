@@ -65,6 +65,12 @@ body {
     height: inherit;
 }
 
+@media screen and (max-width:500px) {
+    .container>* {
+        height: auto;
+    }
+}
+
 .grid>* {
     height: inherit;
 }
