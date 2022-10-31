@@ -105,8 +105,7 @@ const AboutCard = [
     },
 ];
 
-export const AboutCards = () => {
-    return (
+export const AboutCards = () => (
         <ScrollAnimation
             animateOnce={true}
             animateIn="animate__slideInUp"
@@ -116,13 +115,13 @@ export const AboutCards = () => {
 
             <div className="w-full text-black -mt-72">
                 <section className='container px-4 sm:px-3 mx-auto lg:max-w-7xl md:px-8'>
-                    <div className="card-comp bg-zinc-300 rounded-lg grid grid-flow-row grid-cols-1 sm:grid-cols-2  p-10">
+                    <div className="card-comp bg-zinc-300 rounded-lg grid grid-flow-row grid-cols-1 sm:grid-cols-3 p-10">
 
                         {
                             AboutCard.map((card, index) => {
                                 return <div key={index} className={card.class}>
                                     <div className="circle">
-                                        <img src={card.img} className='w-50p' alt="" />
+                                        <img src={card.img} className='w-50p' alt="" loading='lazy'/>
                                     </div>
                                     <div className="decription">
                                         <p className='Heading'>{card.heading}</p>
@@ -149,4 +148,3 @@ export const AboutCards = () => {
             </div>
         </ScrollAnimation>
     )
-}

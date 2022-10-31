@@ -1,4 +1,6 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const socialData = [
   {
@@ -24,12 +26,25 @@ export const Footer = () => {
       <div className="container px-3 mx-auto lg:max-w-7xl md:px-8">
         <div className='flex flex-col justify-between items-center'>
           {/* <img src="./assets/Images/logo2.png" className='w-15p' alt="" /> */}
-          <a href="javascript:void(0)">
-            <h2 className="text-2xl sm:text-4xl font-bold text-center text-gradient pb-7">
-              Gautam
-            </h2>
-          </a>
-          <p className='text-center text-xl sm:text-2xl font text-blue-100 font-demo'>Living, learning & leveling up <br /> all at a time.</p>
+          <ScrollAnimation
+            animateOnce={true}
+            animateIn="animate__fadeInUp"
+            duration={1.2}
+          >
+            <a href="javascript:void(0)">
+              <h2 className="text-2xl sm:text-4xl font-bold text-center text-gradient pb-7">
+                Gautam
+              </h2>
+            </a>
+          </ScrollAnimation>
+
+          <ScrollAnimation
+            animateOnce={true}
+            animateIn="animate__fadeInUp"
+            duration={1.2}
+          >
+            <p className='text-center text-xl sm:text-2xl font text-blue-100 font-demo'>Living, learning & leveling up <br /> all at a time.</p>
+          </ScrollAnimation>
 
           <div className="socialIcons pt-10 sm:pt-14">
             <div className="flex flex-wrap items-center justify-center gap-8">

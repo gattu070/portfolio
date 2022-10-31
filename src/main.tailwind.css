@@ -29,7 +29,7 @@
         @apply border-0;
     }
     .circle {
-        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-[90px] h-[90px] sm:w-110px sm:h-110px flex justify-center items-center;
+        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-[65px] h-[65px] sm:w-110px sm:h-110px flex justify-center items-center;
     }
     .decription {
         @apply flex flex-col items-center justify-between;
