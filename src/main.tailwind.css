@@ -4,7 +4,7 @@
 @layer utilities {
     /* Global */
     .title {
-        @apply text-center font-bold text-2xl sm:text-3xl pb-10 tracking-wide;
+        @apply text-center font-bold text-2xl sm:text-3xl pb-8 sm:pb-16 tracking-wide;
     }
 
     /* Navbar */
@@ -14,13 +14,13 @@
 
     /* About */
     .Designer {
-        @apply flex flex-col items-center  border-zinc-400 border-t-0 border-l-0 border-b-2 border-r-0 sm:border-t-0 sm:border-l-0 sm:border-b-0 sm:border-r-2;
+        @apply flex flex-col items-center !px-4 border-zinc-400 border-t-0 border-l-0 border-b-2 border-r-0 sm:border-t-0 sm:border-l-0 sm:border-b-0 sm:border-r-2;
     }
     .one {
         @apply pt-0 pb-5 sm:p-0;
     }
     .two {
-        @apply pt-5 pb-5 sm:p-0;
+        @apply pt-5 pb-5 sm:p-0 sm:border-r-0 lg:border-r-2;
     }
     .three {
         @apply pt-5 pb-0 sm:p-0;
@@ -29,13 +29,13 @@
         @apply border-0;
     }
     .circle {
-        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-[65px] h-[65px] sm:w-110px sm:h-110px flex justify-center items-center;
+        @apply rounded-full bg-gradient-to-b from-blue-700 to-pink-600 w-[65px] h-[65px] sm:w-[100px] sm:h-[100px] flex justify-center items-center;
     }
     .decription {
         @apply flex flex-col items-center justify-between;
     }
     .Heading {
-        @apply text-black text-xl sm:text-2xl font-black pt-6 pb-6;
+        @apply text-black text-xl sm:text-[1.45rem] font-black pt-6 pb-6;
     }
     .color-change {
         @apply text-center text-fuchsia-900 pb-5;

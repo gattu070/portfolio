@@ -5,7 +5,7 @@ import "animate.css/animate.min.css";
 
 export const About = () => (
     <>
-        <section className="About w-full text-white pt-8 sm:pt-16 pb-[22rem] sm:pb-96 bg-black">
+        <section className="About w-full text-white pt-8 sm:pt-16 pb-[22rem] sm:pb-96 bg-black" id='About'>
             <div className="container px-3 mx-auto lg:max-w-7xl md:px-8">
                 <ScrollAnimation
                     animateOnce={true}

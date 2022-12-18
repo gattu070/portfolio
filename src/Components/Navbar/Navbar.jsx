@@ -18,7 +18,7 @@ export const Navbar = () => {
             <div className="container justify-between px-3 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-1 sm:py-3 md:py-4 md:block">
-                        <a href="javascript:void(0)">
+                        <a href="#Hero">
                             <h2 className="text-2xl sm:text-3xl font-bold text-gradient">
                                 Gautam
                             </h2>
@@ -73,16 +73,16 @@ export const Navbar = () => {
                     <div className={`flex-1 justify-self-center pb-3 md:block md:pb-0 transition duration-500 ${navbar ? "block text-center" : "hidden"}`}>
                         <ul className="items-center justify-center gap-5 md:flex md:space-x-6 md:space-y-0 md:text-center">
                             <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft first pb-1" : ""}`}>
-                                <a href="javascript:void(0)">Home</a>
+                                <a href="#root">Home</a>
                             </li>
                             <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft sec pb-1" : ""}`}>
-                                <a href="javascript:void(0)">About me</a>
+                                <a href="#About">About me</a>
                             </li>
                             <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft thir pb-1" : ""}`}>
-                                <a href="javascript:void(0)">Projects</a>
+                                <a href="#Projects">Projects</a>
                             </li>
                             <li className={`nav-links ${navbar ? "block animate__animated animate__fadeInLeft for pb-1" : ""}`}>
-                                <a href="javascript:void(0)">Contact</a>
+                                <a href="#Contact">Contact</a>
                             </li>
                         </ul>
 

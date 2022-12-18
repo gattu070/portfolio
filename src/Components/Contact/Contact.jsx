@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import 'tw-elements';
 
 const contactDetails = [
   {
@@ -27,7 +28,7 @@ const contactDetails = [
 
 export const Contact = () => {
   return (
-    <section className="Contact w-full text-white pb-16">
+    <section className="Contact w-full text-white pt-8 sm:pt-16 pb-16" id='Contact'>
       <div className="container px-4 sm:px-3 mx-auto lg:max-w-7xl md:px-8">
         <ScrollAnimation
           animateOnce={true}
@@ -53,16 +54,16 @@ export const Contact = () => {
                 <div className='pt-8 sm:pt-12'>
                   {
                     contactDetails.map((contact, index) => {
-                      return <p key={index} className='py-0 pb-4 grid grid-flow-row grid-cols-12 items-center tracking-wide text-gray-800 text-center sm:text-left'>
-                        <i className={`${contact.icon} pr-0 sm:pr-3 pb-2 sm:pb-0 col-span-12 sm:col-span-1 text-indigo-800 text-xl`}></i>
-                        <span className='font-bold text-sm sm:text-base pb-2 sm:pb-0 pr-0 sm:pr-1 col-span-12 sm:col-span-3  text-center'>{contact.boldtxt}</span>
-                        <span className='col-span-12 sm:col-span-5 text-sm sm:text-base'>{contact.text}</span>
+                      return <p key={index} className='py-0 pb-4 grid grid-flow-row grid-cols-12 items-center tracking-wide text-gray-800 text-center lg:text-left'>
+                        <i className={`${contact.icon} pr-0 sm:pr-3 pb-2 lg:pb-0 col-span-12 lg:col-span-1 text-indigo-800 text-xl`}></i>
+                        <span className='font-bold text-sm sm:text-base pb-2 lg:pb-0 pr-0 sm:pr-1 col-span-12 lg:col-span-5 text-center'>{contact.boldtxt}</span>
+                        <span className='col-span-12 lg:col-span-6 text-sm break-words sm:text-base'>{contact.text}</span>
                       </p>
                     })
                   }
                 </div>
 
-                <div className='pt-4'>
+                <div className='pt-4 hidden lg:block'>
                   <img src="./assets/Images/contact4.png" className='w-50p m-auto object-contain animate-up-down filter drop-shadow-2xl' alt="" />
                 </div>
 
@@ -89,8 +90,13 @@ export const Contact = () => {
                 </div>
 
                 <div className="btn text-center sm:text-left pt-6 sm:pt-8">
-                  <button className='bg-indigo-800 text-sm sm:text-base text-white px-3 sm:px-4 py-2 sm:py-3 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 hover:bg-indigo-900'>Send Message</button>
+                  <button data-mdb-ripple="true" data-mdb-ripple-color="light" className='bg-indigo-800 text-sm sm:text-base text-white px-3 lg:px-4 py-2 lg:py-3 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 hover:bg-indigo-900'>Send Message</button>
                 </div>
+
+                <div className='pt-7 sm:pt-10 lg:hidden'>
+                  <img src="./assets/Images/contact4.png" className='w-50p m-auto object-contain animate-up-down filter drop-shadow-2xl' alt="" />
+                </div>
+
               </div>
 
             </div>

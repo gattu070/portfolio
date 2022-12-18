@@ -4,18 +4,23 @@ import "animate.css/animate.min.css";
 
 const socialData = [
   {
+    link: 'https://www.linkedin.com/in/gautam-patoliya-1607b524a',
     icon: 'fa-brands fa-linkedin-in object-contain text-lg sm:text-2xl',
   },
   {
+    link: 'https://instagram.com/mr_gattu_07?igshid=YmMyMTA2M2Y=',
     icon: 'fa-brands fa-instagram object-contain text-lg sm:text-2xl',
   },
   {
+    link: 'https://github.com/gattu070',
     icon: 'fa-brands fa-github object-contain text-lg sm:text-2xl',
   },
   {
+    link: 'https://mail.google.com/mail/u/0/#inbox?compose=new',
     icon: 'fa-regular fa-envelope object-contain text-lg sm:text-2xl',
   },
   {
+    link: 'https://twitter.com/GautamPatoliya2?t=sJmZrYrS2EMVZai7bIkl7Q&s=09',
     icon: 'fa-brands fa-twitter object-contain text-lg sm:text-2xl',
   },
 ]
@@ -31,7 +36,7 @@ export const Footer = () => {
             animateIn="animate__fadeInUp"
             duration={1.2}
           >
-            <a href="javascript:void(0)">
+            <a href="#root">
               <h2 className="text-2xl sm:text-4xl font-bold text-center text-gradient pb-7">
                 Gautam
               </h2>
@@ -51,7 +56,9 @@ export const Footer = () => {
               {
                 socialData.map((data, index) => {
                   return <div key={index} className='border-2 border-blue-400 rounded-full w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] flex justify-center items-center transition duration-300 hover:bg-blue-500 hover:text-black hover:border-blue-500'>
-                    <i className={data.icon}></i>
+                    <a href={data.link} target="_blank">
+                      <i className={data.icon}></i>
+                    </a>
                   </div>
                 })
               }
